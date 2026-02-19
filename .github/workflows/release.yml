@@ -150,7 +150,7 @@ jobs:
 
   create-release:
     needs: [build-apk, build-windows, build-linux, build-macos]
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Download APK
         uses: actions/download-artifact@v4
@@ -183,5 +183,6 @@ jobs:
             EasyGUIFlashTool-Windows.zip
             EasyGUIFlashTool-Linux.tar.gz
             EasyGUIFlashTool-macOS.zip
+
 
 
